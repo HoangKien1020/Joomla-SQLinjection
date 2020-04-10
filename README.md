@@ -46,9 +46,10 @@ sqlmap -u "http://192.168.119.128/index.php?option=com_fields&view=fields&layout
 ## 1. CVE-2020-10243
 ### User requirement: Administrator
 ## Detecting:
-...Update later-...
+![image](https://user-images.githubusercontent.com/24661746/78954200-8d115e00-7b05-11ea-8cd1-0d605fff4101.png)
+
 ### Second-url:
-...Update later-...
+![image](https://user-images.githubusercontent.com/24661746/78954286-d2ce2680-7b05-11ea-9ffb-ec1263618056.png)
 
 Reference:
 1. https://github.com/HoangKien1020/CVE-2020-10243
